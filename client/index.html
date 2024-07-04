@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>url.shortR</title>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="flex-center">
+      <span class="in-animation-01">url</span>
+      <span class="color-3 in-animation-03">.</span>
+      <span class="flex-center in-animation-02">
+        <span>sh</span>
+        <span class="out-animation-01">o</span>
+        <span>rt</span>
+        <span class="out-animation-02">e</span>
+        <span>R</span>
+      </span>
+    </h1>
+
+    <h4>Type an <strong>URL</strong> and <span class="color-3">make it shorter</span>!</h4>
+    <form action="/api" method="post" id="urlForm">
+      <input type="text" name="url" placeholder="https://www.example.com/" autofocus pattern="^(http|https):\/\/.*">
+      <button type="submit">
+        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#fff" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </form>
+
+    <h5>
+      <span>Short URL: </span>
+      <span id="shortURL" target="_blank">
+        <a id="urlText" target="_blank"></a>
+        <div id="copyDiv">
+          <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            id="copySVG">
+            <path
+              d="M6 11C6 8.17157 6 6.75736 6.87868 5.87868C7.75736 5 9.17157 5 12 5H15C17.8284 5 19.2426 5 20.1213 5.87868C21 6.75736 21 8.17157 21 11V16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H12C9.17157 22 7.75736 22 6.87868 21.1213C6 20.2426 6 18.8284 6 16V11Z"
+              stroke="#1C274C" stroke-width="1.5" />
+            <path
+              d="M6 19C4.34315 19 3 17.6569 3 16V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H15C16.6569 2 18 3.34315 18 5"
+              stroke="#1C274C" stroke-width="1.5" />
+          </svg>
+          <span id="isCopied">Copy</span>
+        </div>
+      </span>
+    </h5>
+
+    <footer>
+      <span>Página creada por Nolan Ashcraft</span>
+      <a href="" target="_blank">
+        <span>Github Repo</span>
+        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.7285 3.88396C17.1629 2.44407 19.2609 2.41383 20.4224 3.57981C21.586 4.74798 21.5547 6.85922 20.1194 8.30009L17.6956 10.7333C17.4033 11.0268 17.4042 11.5017 17.6976 11.794C17.9911 12.0863 18.466 12.0854 18.7583 11.7919L21.1821 9.35869C23.0934 7.43998 23.3334 4.37665 21.4851 2.5212C19.6346 0.663551 16.5781 0.905664 14.6658 2.82536L9.81817 7.69182C7.90688 9.61053 7.66692 12.6739 9.51519 14.5293C9.80751 14.8228 10.2824 14.8237 10.5758 14.5314C10.8693 14.2391 10.8702 13.7642 10.5779 13.4707C9.41425 12.3026 9.44559 10.1913 10.8809 8.75042L15.7285 3.88396Z"
+            fill="#1C274C" />
+          <path
+            d="M14.4851 9.47074C14.1928 9.17728 13.7179 9.17636 13.4244 9.46868C13.131 9.76101 13.1301 10.2359 13.4224 10.5293C14.586 11.6975 14.5547 13.8087 13.1194 15.2496L8.27178 20.1161C6.83745 21.556 4.73937 21.5863 3.57791 20.4203C2.41424 19.2521 2.44559 17.1408 3.88089 15.6999L6.30473 13.2667C6.59706 12.9732 6.59614 12.4984 6.30268 12.206C6.00922 11.9137 5.53434 11.9146 5.24202 12.2081L2.81818 14.6413C0.906876 16.5601 0.666916 19.6234 2.51519 21.4789C4.36567 23.3365 7.42221 23.0944 9.33449 21.1747L14.1821 16.3082C16.0934 14.3895 16.3334 11.3262 14.4851 9.47074Z"
+            fill="#1C274C" />
+        </svg>
+      </a>
+    </footer>
+
+  </div>
+</body>
+
+</html>
