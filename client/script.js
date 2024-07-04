@@ -62,11 +62,15 @@ function run() {
   const urlForm = document.getElementById("urlForm");
   urlForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    console.log("SUBMIT");
     const form = event.target;
     const formData = new FormData(form);
     const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
+    console.log(form, jsonData);
+
     try {
+      console.log("TRY");
       const response = await fetch(form.action, {
         method: form.method,
         headers: {
@@ -74,14 +78,14 @@ function run() {
         },
         body: jsonData
       });
+      console.log("AFTER TRY");
+      console.log(response);
 
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }
 
       const result = await response.json();
-
-      console.log(result.check);
 
       document.getElementById("urlText").href = result.newUrl;
       document.getElementById("urlText").innerText = result.newUrl;

@@ -28,9 +28,9 @@ router.get("/*", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const url = await urlController.addNewUrl(req.body.url);
-    console.log(req.rawHeaders[13], url.short);
+    console.log(req.rawHeaders[13] + url.short);
     console.log(url);
-    res.status(200).send({ ...url, newUrl: req.rawHeaders[13] + url.short, check: JSON.stringify(req) });
+    res.status(200).send({ ...url, newUrl: req.rawHeaders[13] + url.short });
   } catch (error) {
     res.status(500).send(error);
   }
