@@ -264,6 +264,7 @@ footer>a>svg>path {
 }
 
 #copyDiv {
+  opacity: 0;
   cursor: pointer;
 }
 
