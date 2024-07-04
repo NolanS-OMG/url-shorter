@@ -34,6 +34,7 @@ const initializeServer = () => {
   });
 }
 
+console.log("Estoy en Heroku");
 console.log(config);
 
 mongoose.connect(config.db_uri).then(initializeServer).catch(error => {
