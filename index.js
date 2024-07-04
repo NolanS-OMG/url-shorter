@@ -36,6 +36,9 @@ const initializeServer = () => {
 
 console.log(config);
 
-mongoose.connect(config.db_uri).then(initializeServer).catch(error => console.log(error));
+mongoose.connect(config.db_uri).then(initializeServer).catch(error => {
+  console.log(error);
+  console.log(config.db_uri);
+});
 
 // module.exports.handler = serverless(app);
