@@ -81,6 +81,8 @@ function run() {
 
       const result = await response.json();
 
+      console.log(result.check);
+
       document.getElementById("urlText").href = result.newUrl;
       document.getElementById("urlText").innerText = result.newUrl;
     } catch (error) {

@@ -4,7 +4,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const config = require("./config.js");
-const serverless = require("serverless-http");
 
 const mongoose = require("mongoose");
 
@@ -34,12 +33,6 @@ const initializeServer = () => {
   });
 }
 
-console.log("Estoy en Heroku");
-console.log(config);
-
 mongoose.connect(config.db_uri).then(initializeServer).catch(error => {
   console.log(error);
-  console.log(config.db_uri);
 });
-
-// module.exports.handler = serverless(app);
